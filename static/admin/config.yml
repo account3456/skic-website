@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: account3456/skic-website
+  name: git-gateway
   branch: main
-  base_url: https://netlify-oauth.netlify.app
 
 display_url: https://skicsh.com
 logo_url: /images/skic-logo.png
@@ -49,7 +47,6 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "body", widget: "markdown"}
-          - {label: "Map Enable", name: "map", widget: "boolean", default: false}
       - label: "Results"
         name: "results"
         file: "content/english/results.md"
