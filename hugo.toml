@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://skicsh.com"
+baseURL = "/"
 title = "Sarvoday Kisan Inter College, Shikoi (BSR)"
 timeZone = "Asia/Kolkata"
 pagination.pagerSize = 6
