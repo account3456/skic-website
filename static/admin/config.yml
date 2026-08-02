@@ -67,6 +67,16 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "body", widget: "markdown"}
 
+  - name: "custom_pages"
+    label: "Custom Pages"
+    folder: "content/english/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
+
   - name: "homepage"
     label: "Homepage Settings"
     files:
