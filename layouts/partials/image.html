@@ -1,0 +1,19 @@
+{{ $src := .Src }}
+{{ $alt := .Alt }}
+{{ $class := .Class }}
+
+{{ if $src }}
+  {{ if or (hasPrefix $src "http") (hasPrefix $src "/") }}
+    <!-- External or absolute path - use as-is -->
+    <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy">
+  {{ else }}
+    <!-- Try Hugo page resources first, then static -->
+    {{ $imgResource := resources.Get $src }}
+    {{ if $imgResource }}
+      <img src="{{ $imgResource.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy">
+    {{ else }}
+      <!-- Fallback to static path -->
+      <img src="/{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy">
+    {{ end }}
+  {{ end }}
+{{ end }}

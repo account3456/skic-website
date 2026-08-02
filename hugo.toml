@@ -1,0 +1,116 @@
+######################## default configuration ####################
+baseURL = "https://skicsh.com"
+title = "Sarvoday Kisan Inter College, Shikoi (BSR)"
+timeZone = "Asia/Kolkata"
+pagination.pagerSize = 6
+summaryLength = 10
+disableLanguages = []
+hasCJKLanguage = false
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[services]
+[services.googleAnalytics]
+ID = ''
+[services.disqus]
+shortname = 'skic'
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/watching/hugo_stats.json"
+
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = '(js|scripts|javascript)'
+[[build.cachebusters]]
+source = 'assets/.*\.(css|sass|scss)$'
+target = '(css|styles|scss|sass)'
+[[build.cachebusters]]
+source = 'assets/.*\.(.*)$'
+target = '$1'
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[imaging]
+quality = 90
+resampleFilter = "lanczos"
+
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+style = 'monokai'
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 5
+ordered = true
+
+[params]
+logo = "images/skic-logo.png"
+description = "Sarvoday Kisan Inter College, Shikoi (BSR) - UP Board affiliated school offering Humanities, Science (PCM/PCB), and Commerce streams."
+author = "Sarvoday Kisan Inter College"
+address = "Sarvoday Kisan Inter College, Shikoi, Bulandshahr - 203398, UP"
+mobile = "+919759323838"
+email = "skics111@gmail.com"
+contact_form_action = "#"
+google_analitycs_id = ""
+top_header = false
+
+[params.preloader]
+enable = false
+
+[params.subscription]
+enable = false
+
+[params.cookies]
+enable = false
+
+[params.map]
+enable = false
+
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/animate/animate.css"
+[[params.plugins.css]]
+link = "plugins/venobox/venobox.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/venobox/venobox.min.js"
+[[params.plugins.js]]
+link = "plugins/filterizr/jquery.filterizr.min.js"
+[[params.plugins.js]]
+link = "plugins/google-map/gmap.js"
+
+[[params.social]]
+title = "facebook"
+icon = "ti-facebook"
+link = "#"

@@ -1,0 +1,11 @@
+################### English language #####################################
+[en]
+label = "En"
+locale = "en-us"
+contentDir = "content/english"
+weight = 1
+
+[en.params]
+home = "Home"
+# copyright
+copyright = "Copyright &copy; 2026 Sarvoday Kisan Inter College, Shikoi (BSR)"

@@ -1,0 +1,66 @@
+################### English navigation ####################
+# main menu
+[[main]]
+name = "Home"
+url = ""
+weight = 1
+
+[[main]]
+name = "About"
+url = "about/"
+weight = 2
+
+[[main]]
+name = "Curriculum"
+url = "course/"
+weight = 3
+
+[[main]]
+name = "Faculty"
+url = "teacher/"
+weight = 4
+
+[[main]]
+name = "Notice Board"
+url = "notice/"
+weight = 5
+
+[[main]]
+name = "Results"
+url = "results/"
+weight = 6
+
+[[main]]
+name = "Admission"
+url = "admission/"
+weight = 7
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 8
+
+# footer menu
+[[footer]]
+name = "About"
+url = "about/"
+
+[[footer]]
+name = "Faculty"
+url = "teacher/"
+
+[[footer]]
+name = "Notice Board"
+url = "notice/"
+
+[[footer]]
+name = "Results"
+url = "results/"
+
+[[footer]]
+name = "Admission"
+url = "admission/"
+
+[[footer]]
+name = "Contact"
+url = "contact/"

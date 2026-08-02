@@ -1,0 +1,33 @@
+{{ "<!-- plugins -->" | safeHTML }}
+{{ range site.Params.plugins.js }}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ if site.Params.cookies.enable }}
+<!-- cookie -->
+<script>
+  // Accept cookie consent
+  const cookieBox = document.querySelector('.cookie-box');
+  if (cookieBox) {
+    document.querySelector('.cookie-box a').addEventListener('click', () => {
+      cookieBox.classList.add('cookie-box-hide');
+      // expire by given days
+      const expireDays = {{ site.Params.cookies.expire_days | default 2 }};
+      const date = new Date();
+      date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+      document.cookie = 'consent=true;expires=' + date.toUTCString() + ';path=/';
+    });
+  }
+  // Check cookie consent
+  if (document.cookie.indexOf('consent') !== -1) {
+    const cookieBox = document.querySelector('.cookie-box');
+    if (cookieBox) {
+      cookieBox.classList.add('cookie-box-hide');
+    }
+  }
+</script>
+{{ end }}

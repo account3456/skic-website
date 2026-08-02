@@ -1,0 +1,82 @@
+slider:
+  enable: true
+  bg_image: "images/banner/banner-bg.jpg"
+  slider_item:
+    - title: "Your Bright Future Starts Here"
+      content: "Quality education in Science, Commerce, and Humanities streams since 1957."
+      animation_in: "left"
+      animation_out: "right"
+      button:
+        enable: true
+        label: "Enroll Now"
+        link: "contact/"
+    - title: "Excellence in Education"
+      content: "Well-rounded, confident, and responsible individuals achieving their full potential."
+      animation_in: "right"
+      animation_out: "left"
+      button:
+        enable: true
+        label: "Learn More"
+        link: "about/"
+
+banner_feature:
+  enable: true
+  image: "images/banner/banner-feature.png"
+  feature_item:
+    - name: "Results Portal"
+      icon: "ti-blackboard"
+      content: "Check UP Board exam results directly through our portal."
+    - name: "Notice Board"
+      icon: "ti-agenda"
+      content: "Stay updated with the latest college announcements."
+    - name: "Our Achievements"
+      icon: "ti-trophy"
+      content: "Proudly serving the community since 1957."
+    - name: "Admission Open"
+      icon: "ti-write"
+      content: "Admissions open for Science, Commerce, and Humanities."
+
+about:
+  enable: true
+  title: "About SKIC"
+  image: "images/about/about-us.jpg"
+  content: "Sarvoday Kisan Inter College, Shikoi is a UP Board affiliated school established in 1957, offering quality education in Science (PCM/PCB), Commerce, and Humanities up to senior secondary level. We nurture well-rounded students prepared for a globalized world."
+  button:
+    enable: true
+    label: "Learn More"
+    link: "about/"
+
+course:
+  enable: true
+  title: "Our Streams"
+
+cta:
+  enable: true
+  subtitle: "Don't Miss the Opportunity"
+  title: "Admissions Open 2026-27"
+  button:
+    enable: true
+    label: "Enquire Now"
+    link: "contact/"
+
+success_story:
+  enable: false
+
+event:
+  enable: true
+  title: "Notices & Announcements"
+
+funfacts:
+  enable: true
+  funfact_item:
+    - name: "FACULTY"
+      count: "22"
+    - name: "STREAMS"
+      count: "3"
+    - name: "ESTABLISHED"
+      count: "1957"
+    - name: "CLASSES"
+      count: "6-12"
+
+blog:
+  enable: false
