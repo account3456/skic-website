@@ -72,11 +72,18 @@
     if ($(window).scrollTop() > oTop) {
       $('.count').each(function () {
         var $this = $(this),
-          countTo = $this.attr('data-count');
+          countTo = $this.attr('data-count'),
+          startVal = parseFloat($this.text()) || 0,
+          endVal = parseFloat(countTo);
+        // Skip non-numeric values (e.g. "6-12") and just display them as-is
+        if (isNaN(endVal)) {
+          $this.text(countTo);
+          return true; // continue to next element
+        }
         $({
-          countNum: $this.text()
+          countNum: startVal
         }).animate({
-          countNum: countTo
+          countNum: endVal
         }, {
           duration: 1000,
           easing: 'swing',
