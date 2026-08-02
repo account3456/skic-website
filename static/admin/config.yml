@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: account3456/skic-website
+  branch: main
+  base_url: https://netlify-oauth.netlify.app
+
+display_url: https://skicsh.com
+logo_url: /images/skic-logo.png
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "notice"
+    label: "Notices"
+    folder: "content/english/notice"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "teacher"
+    label: "Teachers"
+    folder: "content/english/teacher"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Designation", name: "designation", widget: "string"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/english/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - label: "Contact"
+        name: "contact"
+        file: "content/english/contact.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Map Enable", name: "map", widget: "boolean", default: false}
+      - label: "Results"
+        name: "results"
+        file: "content/english/results.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Board Results Link", name: "board_results_link", widget: "string", required: false}
+      - label: "Admission"
+        name: "admission"
+        file: "content/english/admission.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - label: "Curriculum"
+        name: "curriculum"
+        file: "content/english/curriculum.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "homepage"
+    label: "Homepage Settings"
+    files:
+      - label: "Hero Banner"
+        name: "banner"
+        file: "data/en/homepage.yml"
+        fields:
+          - label: "Banner Background Image"
+            name: "slider.bg_image"
+            widget: "image"
+          - label: "Slide 1"
+            name: "slider.slider_item"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - {label: "Enable", name: "enable", widget: "boolean", default: true}
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string"}
